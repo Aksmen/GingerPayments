@@ -1,0 +1,71 @@
+class Person(object):
+	def __init__(self, first, last, streets, mails, groups):
+	def printPerson(self):
+
+Makes a Person object when giving a string first and last and giving a list of strings with streets, mails and groups. 
+Even if a person have 1 street, mail or group, you still have to give the input in a list with 1 string. (This could be improved)
+printPerson() prints all personal details from the Person.
+
+
+class Group(object):
+	def __init__(self, name):
+
+Makes a Group object when giving a string of the groupsname.
+The Group object also holds an empty list of Persons by default.
+
+
+class Book(object):
+    	def __init__(self):
+
+Makes a Book object.
+The Book object holds an empty list of Persons and Groups by default.
+
+
+def addPerson(person, book):
+
+Input: Person object, Book object.
+Adds Person object to the Books list of Persons.
+For each of the Persons groups it does the following:
+If group not in Books list of Groups, add Group to Books list and add Person to that Group.
+If group alreaddy in Books list of Groups, add Person to that group.
+
+
+def addGroup(groupname, book):
+
+Input: String object, Book object.
+If groupname is alreaddy in Books list of Groups, groupname will not be added.
+Otherwise, groupname is added to Books list of Groups
+
+
+def findGroupMembers(group, book):
+
+Input Group object, Book object.
+Returns every first and last name of persons in group.
+If group is not found in address book, an error message will be printed.
+
+
+def findPersonGroups(person, book):
+
+Input Person object, Book object.
+Returns every group name of person.
+If person is not found in address book, an error message will be printed.
+
+
+def findPersonByName(name, book):
+Input String object, Book object.
+Returns all personal details from Person where the String equals either the first name, last name or first + last name.
+If name does not match with any person in the address book, an error message will be printed.
+
+
+def findPersonByMail(mail, book):   
+Input String object, Book object.
+Returns all personal details from Person where the String equals the first part of the persons email address.
+If mail does not match with any persons email address in the address book, an error message will be printed.
+
+
+
+For the find person by email adress with any substring:
+Name the input String x
+Loop through all persons emailadresses and name them temporary y
+If x in y:
+	True: print persons details.
